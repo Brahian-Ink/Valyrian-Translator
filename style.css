@@ -5,12 +5,13 @@ body {
     background-repeat: no-repeat;
     background-position-y: 40%;
     background-size: cover;
-    color: #f5f5f5;
+    color: #dadada;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-size: 12px;
     
   }
   
@@ -18,15 +19,13 @@ body {
     text-align: center;
     max-width: 600px;
     padding: 30px;
-    border: 3px solid #c5c5c5; 
+    background: linear-gradient(to bottom, #272727, #0d0d0d);
+    border: 2px solid #999;
     border-radius: 20px;
-    box-shadow: 0 0 20px #ffffff;
-    background-image: url(box_background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    
-  }
+    background-size: auto;
+    border-image: linear-gradient(45deg, #ebebeb, #aaa, #ffffff) 1;
+}
+  
   
   
   textarea {
@@ -37,23 +36,73 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 16px;
     text-align: center;
+    border-radius: 10px;
   }
   
-  button {
+  .fire-btn {
     font-family: 'Cinzel', serif;
     padding: 10px 25px;
-    font-size: 18px;                  
-    background-color: #4e4e4e;
+    font-size: 18px;
+    background-color: #535353;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     transition: background-color 0.3s;
   }
   
-  button:hover {
-    background-color: #922424;
+  .fire-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgb(255, 166, 0) 0%, transparent 70%);
+    animation: flames 1.2s infinite linear;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+  }
+  
+  .fire-btn:hover::before {
+    opacity: 1;
+  }
+  
+  .fire-btn:hover {
+    background-color: #ff631a;
+    color: #ffffff;
+  }
+  
+  .spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 50%;
+    animation: spark-move 0.6s linear forwards;
+    z-index: 999;
+  }
+  
+  @keyframes spark-move {
+    0% { opacity: 1; transform: translate(0, 0) scale(1.3); }
+    100% {
+      opacity: 0;
+      transform: translate(calc(-50px + 400px * var(--rand-x)), calc(-50px + 400px * var(--rand-y))) scale(0);
+    }
+  }
+
+
+
+  @keyframes flames {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); }
   }
   
   #outputText {
@@ -63,12 +112,19 @@ body {
     background-color: transparent;
     padding: 0px;
     border-radius: 5px;
+    opacity: 0;
+    color: #d1d1d1;
+    transition: opacity 0.8s ease;
+    font-weight: lighter;
   }
-  
+  #outputText.mostrar {
+    opacity: 1;
+  }
 
   .desconocida { /*Colro de la palabra que no esta en el diccionario del alto valyrio*/
-    color: rgb(255, 207, 50);
+    color: rgb(88, 88, 88);
     font-family: 'Cinzel', serif;
     font-weight: lighter;
   }
   
+ 

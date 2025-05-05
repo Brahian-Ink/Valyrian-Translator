@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traductor Alto Valyrio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor Alto Valyrio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Traductor de Alto Valyrio</h1>
-        <textarea id="inputText" placeholder="Escribe tu frase"></textarea>
-        <button onclick="traducir()">Traducir</button>
-        <div id="outputText"></div>
-    </div>
-    <script src="diccionario.js"></script>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Traductor al Alto Valyrio</h1>
+    <textarea id="inputText" placeholder="Escribí tu frase aquí..." oninput="detectarCambio()"></textarea>
+    <button class="fire-btn" onclick="traducir(); lanzarChispas(this)">traducir</button>
+    <div id="outputText"></div>
+  </div>
+  <script src="diccionario.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
