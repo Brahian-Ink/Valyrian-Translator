@@ -1,0 +1,74 @@
+/* Estilos visuales para la app */
+body {
+    font-family: 'Cinzel', serif;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    background-size: cover;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    border: 3px solid #c5c5c5; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+    background-image: url(box_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+  }
+  
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    padding: 0px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  button {
+    font-family: 'Cinzel', serif;
+    padding: 10px 25px;
+    font-size: 18px;                  
+    background-color: #4e4e4e;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #922424;
+  }
+  
+  #outputText {
+    margin-top: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 5px;
+  }
+  
+
+  .desconocida { /*Colro de la palabra que no esta en el diccionario del alto valyrio*/
+    color: rgb(255, 207, 50);
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+  }
+  
