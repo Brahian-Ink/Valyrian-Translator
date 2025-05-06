@@ -4,6 +4,7 @@ body {
     background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-position-y: 40%;
+    background-position: center;
     background-size: cover;
     color: #dadada;
     display: flex;
@@ -19,11 +20,12 @@ body {
     text-align: center;
     max-width: 600px;
     padding: 30px;
+    margin: 30px;
     background: linear-gradient(to bottom, #272727, #0d0d0d);
-    border: 2px solid #999;
+    border: 1px solid #2c2c2c;
     border-radius: 20px;
     background-size: auto;
-    border-image: linear-gradient(45deg, #ebebeb, #aaa, #ffffff) 1;
+    border-image: linear-gradient(45deg, #000000, #8b8b8b, #ffffff) 1;
 }
   
   
@@ -37,6 +39,8 @@ body {
     font-size: 16px;
     text-align: center;
     border-radius: 10px;
+    background-color: #272727;
+    color: #dadada;
   }
   
   .fire-btn {
@@ -45,7 +49,8 @@ body {
     font-size: 18px;
     background-color: #535353;
     color: #fff;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
+    border-image: linear-gradient(45deg, #4d4d4d, #8b8b8b, #ffffff) 1;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
@@ -108,7 +113,7 @@ body {
   #outputText {
     margin-top: 20px;
     font-family: 'Cinzel', serif;
-    font-size: 20px;
+    font-size: 22px;
     background-color: transparent;
     padding: 0px;
     border-radius: 5px;
@@ -127,4 +132,34 @@ body {
     font-weight: lighter;
   }
   
- 
+  .footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .footer a {
+    color: #e50914;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: none;
+  }
+
+
+  /*ESTILO DE TEXTO DE ADVERTENCIA*/
+  #outputText .aviso {
+    font-size: 12px;
+    color: #ff9999;
+    margin-top: 10px;
+    display: block;
+    font-style: italic;
+  }

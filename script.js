@@ -19,7 +19,7 @@ function traducir() {
   
     let resultado = traducidas.join(" ");
     if (contieneDesconocidas) {
-      resultado += "<br><br><strong>Algunas palabras no existen en la lengua Valyrio.</strong>";
+      resultado += '<br><span class="aviso">Algunas palabras no existen en la lengua Valyrio.</span>';
     }
   
     const salida = document.getElementById("outputText");
