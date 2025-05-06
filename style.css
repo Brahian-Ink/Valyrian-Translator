@@ -133,7 +133,7 @@ body {
   }
   
   .footer {
-    background-color: #000;
+    background-color: transparent;
     color: #aaa;
     text-align: center;
     padding: 15px 10px;
